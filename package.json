@@ -1,0 +1,14 @@
+{
+  "name": "create-loon-app",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "vh7157@gmail.com",
+  "license": "MIT",
+  "bin": {
+    "create-loon-app": "./index.js"
+  },
+  "dependencies": {
+    "commander": "^2.16.0",
+    "fs-extra": "^7.0.0"
+  }
+}
