@@ -11,7 +11,7 @@ program
   .version(pkg.version, '-v, --version')
   .arguments('<appName>')
   .description('creates a new loon application with default structure and a hello world controller')
-  .option('-s, --server', 'server type, support express and fastify, default is fastify')
+  .option('-s, --server [type]', 'server type, support express and fastify, default is fastify')
   // .option('-t, --template', 'support custom template')
   .action((appName, cmd) => {
     verifyType(cmd.server);
@@ -36,7 +36,6 @@ async function createApp(name, cmd) {
   await copyTemplates(root);
   await changeServerType(root, cmd.server);
 
-  process.chdir(root);
   console.log('create loon app done, happy coding!');
 }
 
